@@ -19,7 +19,9 @@ public class ContaCorrente{
       return (saldo);
 }
 
+    public String exibe() {
+        return String.format("Agência: %d\nConta: %d\nSaldo: R$ %.2f", agencia, numero, saldo);
     }
 
-
+    }
 }
