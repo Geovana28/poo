@@ -1,4 +1,4 @@
-package psc;
+package retangulo;
 
 /**
  * Representa um retângulo com altura e largura, e métodos para calcular sua área e perímetro.

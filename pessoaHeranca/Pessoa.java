@@ -1,7 +1,7 @@
-package pessoa;
+package pessoaHeranca;
 
 /**
- * Representa uma pessoa com o atributo nome.
+ * Classe base Pessoa com o atributo nome.
  */
 public class Pessoa {
     private String nome;

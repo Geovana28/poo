@@ -1,7 +1,8 @@
-package pessoa;
+package pessoaHeranca;
 
 /**
  * Representa uma pessoa física com o atributo CPF.
+ * Estende a classe Pessoa.
  */
 public class PessoaFisica extends Pessoa {
     private String cpf;

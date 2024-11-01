@@ -1,7 +1,8 @@
-package pessoa;
+package pessoaHeranca;
 
 /**
  * Representa uma pessoa jurídica com o atributo CNPJ.
+ * Estende a classe Pessoa.
  */
 public class PessoaJuridica extends Pessoa {
     private String cnpj;
