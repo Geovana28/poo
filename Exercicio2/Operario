@@ -1,0 +1,46 @@
+package Exercicio2;
+
+public class Operario extends Empregado {
+
+    private String valorProducao;
+    private String comissao;
+
+    public Operario() {
+        super();
+        this.valorProducao = "";
+        this.comissao = "";
+    }
+
+    public Operario(String nome, String idade, String altura, String peso, String numeroSecao, String salarioBase, String INSS, String valorProducao, String comissao) {
+        super(nome, idade, altura, peso, numeroSecao, salarioBase, INSS);
+        this.valorProducao = valorProducao;
+        this.comissao = comissao;
+    }
+
+    public String getValorProducao() {
+        return valorProducao;
+    }
+
+    public void setValorProducao(String valorProducao) {
+        this.valorProducao = valorProducao;
+    }
+
+    public String getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(String comissao) {
+        this.comissao = comissao;
+    }
+
+    public double calcularSalario() {
+        double salario = super.calcularSalario(); 
+        double valorProducao = Double.parseDouble(this.valorProducao); 
+        double comissao = Double.parseDouble(this.comissao); 
+        return salario + (valorProducao * (comissao / 100)); 
+    }
+
+    public String toString() {
+        return super.toString() + ", Valor de Produção: " + valorProducao + ", Comissão: " + comissao;
+    }
+}

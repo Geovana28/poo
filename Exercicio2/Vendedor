@@ -1,0 +1,47 @@
+package Exercicio2;
+
+public class Vendedor extends Empregado {
+
+    private String valorVendas;
+    private String comissao;
+
+    public Vendedor() {
+        super();
+        this.valorVendas = "";
+        this.comissao = "";
+    }
+
+    public Vendedor(String nome, String idade, String altura, String peso, String numeroSecao, String salarioBase, String INSS, String valorVendas, String comissao) {
+        super(nome, idade, altura, peso, numeroSecao, salarioBase, INSS);
+        this.valorVendas = valorVendas;
+        this.comissao = comissao;
+    }
+
+    public String getValorVendas() {
+        return valorVendas;
+    }
+
+    public void setValorVendas(String valorVendas) {
+        this.valorVendas = valorVendas;
+    }
+
+    public String getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(String comissao) {
+        this.comissao = comissao;
+    }
+
+    @Override
+    public double calcularSalario() {
+        double salario = super.calcularSalario(); 
+        double valorVendas = Double.parseDouble(this.valorVendas); 
+        double comissao = Double.parseDouble(this.comissao); 
+        return salario + (valorVendas * (comissao / 100)); 
+    }
+
+    public String toString() {
+        return super.toString() + ", Valor de Vendas: " + valorVendas + ", Comissão: " + comissao;
+    }
+}

@@ -1,0 +1,56 @@
+package Exercicio2;
+
+public class Empregado extends Pessoa {
+
+    private String numeroSecao;
+    private String salarioBase;
+    private String INSS;
+
+    public Empregado() {
+        super();
+        this.numeroSecao = "";
+        this.salarioBase = "";
+        this.INSS = "";
+    }
+
+    public Empregado(String nome, String idade, String altura, String peso, String numeroSecao, String salarioBase, String INSS) {
+        super(nome, idade, altura, peso);
+        this.numeroSecao = numeroSecao;
+        this.salarioBase = salarioBase;
+        this.INSS = INSS;
+    }
+
+    public String getNumeroSecao() {
+        return numeroSecao;
+    }
+
+    public void setNumeroSecao(String numeroSecao) {
+        this.numeroSecao = numeroSecao;
+    }
+
+    public String getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(String salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public String getINSS() {
+        return INSS;
+    }
+
+    public void setINSS(String INSS) {
+        this.INSS = INSS;
+    }
+
+    public double calcularSalario() {
+        double salario = Double.parseDouble(salarioBase);
+        double inss = Double.parseDouble(INSS);
+        return salario - (salario * (inss / 100)); 
+    }
+
+    public String toString() {
+        return super.toString() + ", Número da Seção: " + numeroSecao + ", Salário Base: " + salarioBase + ", INSS: " + INSS;
+    }
+}

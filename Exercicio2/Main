@@ -1,0 +1,33 @@
+package Exercicio2;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Empregado emp = new Empregado("João", "30", "1.75", "70", "101", "3000", "11");
+        Cliente cli = new Cliente("Maria", "28", "1.65", "60", "5000", "2000");
+
+        System.out.println("Empregado:");
+        System.out.println(emp);
+        System.out.println("Salário líquido: " + emp.calcularSalario());
+
+        System.out.println("\nCliente:");
+        System.out.println(cli);
+        System.out.println("Saldo disponível: " + cli.obterSaldo());
+
+        Administrador adm = new Administrador("Carlos", "40", "1.80", "85", "102", "5000", "10", "1500");
+        Operario op = new Operario("Lucas", "35", "1.75", "80", "103", "2500", "8", "20000", "5");
+
+        System.out.println("Administrador:");
+        System.out.println(adm);
+        System.out.println("Salário do Administrador: " + adm.calcularSalario());
+
+        System.out.println("\nOperário:");
+        System.out.println(op);
+        System.out.println("Salário do Operário: " + op.calcularSalario());
+
+        System.out.println("\nVendedor:");
+        System.out.println(vend);
+        System.out.println("Salário do Vendedor: " + vend.calcularSalario());
+
+    }
+}

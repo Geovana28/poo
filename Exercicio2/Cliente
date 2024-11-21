@@ -1,0 +1,45 @@
+package Exercicio2;
+
+public class Cliente extends Pessoa {
+
+    private String credMax;
+    private String valorEmDivida;
+
+    public Cliente() {
+        super();
+        this.credMax = "";
+        this.valorEmDivida = "";
+    }
+
+    public Cliente(String nome, String idade, String altura, String peso, String credMax, String valorEmDivida) {
+        super(nome, idade, altura, peso);
+        this.credMax = credMax;
+        this.valorEmDivida = valorEmDivida;
+    }
+
+    public String getCredMax() {
+        return credMax;
+    }
+
+    public void setCredMax(String credMax) {
+        this.credMax = credMax;
+    }
+
+    public String getValorEmDivida() {
+        return valorEmDivida;
+    }
+
+    public void setValorEmDivida(String valorEmDivida) {
+        this.valorEmDivida = valorEmDivida;
+    }
+
+    public double obterSaldo() {
+        double creditoMax = Double.parseDouble(credMax);
+        double divida = Double.parseDouble(valorEmDivida);
+        return creditoMax - divida; 
+    }
+
+    public String toString() {
+        return super.toString() + ", Crédito Máximo: " + credMax + ", Valor em Dívida: " + valorEmDivida;
+    }
+}
