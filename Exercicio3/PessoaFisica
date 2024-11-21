@@ -1,0 +1,15 @@
+package Exercicio3;
+
+public class PessoaFisica extends Pessoa {
+    private String rg;
+    private String cpf;
+
+    public PessoaFisica (String nome, String telefone, String endereco, String rg, String cpf) {
+        super(nome, telefone, endereco);
+        this.rg = rg;
+        this.cpf = cpf;
+    }
+    public String exibe() {
+        return super.exibe() + ", RG: " + rg + ", CPF: " + cpf;
+    }
+}

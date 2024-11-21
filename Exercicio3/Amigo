@@ -1,0 +1,14 @@
+package Exercicio3;
+
+public class Amigo extends PessoaFisica {
+    private String blog;
+
+    public Amigo(String nome, String telefone, String endereco, String rg, String cpf, String blog) {
+        super(nome, telefone, endereco, rg, cpf);
+        this.blog = blog;
+    }
+
+    public String exibe() {
+        return super.exibe() + ", Blog: " + blog;
+    }
+}

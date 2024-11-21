@@ -1,0 +1,14 @@
+package Exercicio3;
+
+public class Parente extends PessoaFisica {
+    private String email;
+
+    public Parente(String nome, String telefone, String endereco, String rg, String cpf, String email) {
+        super(nome, telefone, endereco, rg, cpf);
+        this.email = email;
+    }
+
+    public String exibe() {
+        return super.exibe() + ", Email: " + email;
+    }
+}

@@ -1,4 +1,4 @@
-public class Amigo extends PF {
+public class Amigo extends PessoaFisica {
     private String blog;
 
     public Amigo() {
